@@ -35,4 +35,34 @@
 
 - (AFHTTPRequestOperation *)HTTPRequestOperationWithRequest:(NSURLRequest *)request
                                                    complete:(void (^)(AFHTTPRequestOperation *operation, id responseObject, NSError *error))complete;
+
+
+- (AFHTTPRequestOperation *)GET:(NSString *)URLString
+                     parameters:(id)parameters
+                       complete:(void (^)(AFHTTPRequestOperation *operation, id responseObject, NSError *error))complete;
+
+- (AFHTTPRequestOperation *)HEAD:(NSString *)URLString
+                      parameters:(id)parameters
+                        complete:(void (^)(AFHTTPRequestOperation *operation, id responseObject, NSError *error))complete;
+
+- (AFHTTPRequestOperation *)POST:(NSString *)URLString
+                      parameters:(id)parameters
+                        complete:(void (^)(AFHTTPRequestOperation *operation, id responseObject, NSError *error))complete;
+
+- (AFHTTPRequestOperation *)POST:(NSString *)URLString
+                      parameters:(id)parameters
+       constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block
+                        complete:(void (^)(AFHTTPRequestOperation *operation, id responseObject, NSError *error))complete;
+
+- (AFHTTPRequestOperation *)PUT:(NSString *)URLString
+                     parameters:(id)parameters
+                       complete:(void (^)(AFHTTPRequestOperation *operation, id responseObject, NSError *error))complete;
+
+- (AFHTTPRequestOperation *)PATCH:(NSString *)URLString
+                       parameters:(id)parameters
+                         complete:(void (^)(AFHTTPRequestOperation *operation, id responseObject, NSError *error))complete;
+
+- (AFHTTPRequestOperation *)DELETE:(NSString *)URLString
+                        parameters:(id)parameters
+                          complete:(void (^)(AFHTTPRequestOperation *operation, id responseObject, NSError *error))complete;
 @end
